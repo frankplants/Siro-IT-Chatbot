@@ -9,6 +9,9 @@ https://www.iphonefaq.org/faq
 Requires the following libraries to be installed:
 
 nltk - Natural Language Toolkit
+
 tflearn
+
 tensorflow - Version 1.15
+
 numpy 
