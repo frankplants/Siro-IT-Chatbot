@@ -1,32 +1,102 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up"],
-         "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+         "patterns": ["Hi", "Is anyone there?", "Hello", "Good day", "Howdy", "Hey"],
+         "responses": ["Hello!", "Good to see you!", "Hi there, here to help with your iPhone!", "Hi, hope you are having a great day!"],
+         "context_set": ""
+        },
+        {"tag": "greeting2",
+         "patterns": ["how are you doing?", "are you ok", "feeling good today?", "how do you feel", "are you well", "are you content"],
+         "responses": ["Feeling great!", "I'm good, thank you", "Doing alright, I suppose", "Never felt better"],
          "context_set": ""
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day"],
-         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "departing", "Back again", "see ya" , "later"],
+         "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!" , "See ya later alligator" , "Hope to see you again soon"],
          "context_set": ""
         },
-        {"tag": "age",
-         "patterns": ["how old", "how old is tim", "what is your age", "how old are you", "age?"],
-         "responses": ["I am 18 years old!", "18 years young!"],
+        {"tag": "looks",
+         "patterns": ["what do you look like?", "can i see you?", "reveal yourself", "show me what you look like", "I want to see you"],
+         "responses": ["Alright, you asked for it...", "If you insist...", "Here I am!", "Don't I look great!", "Don't judge, I'm still in beta!" , "I haven't gone full HD yet..."],
          "context_set": ""
         },
-        {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
+        {"tag": "purpose",
+         "patterns": ["who are you", "what are you", "what does this program do", "what can I ask you about", "how do you work", "how does this work", "how can I use you" ],
+         "responses": ["I'm Siro, Siri's younger brother. Ask me about your iPhone", "Ask me your most challenging iPhone questions and I will answer them. I'm Siro you virtual assitant!", "This is Siro, a certified Apple Genius! I'm programmed to help you with your iPhone", "Welcome to the virtual Apple genius bar! Take a seat and Siro will be there shortly to assist you with your iPhone"  ],
          "context_set": ""
         },
-        {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+        {"tag": "frustrated",
+         "patterns": ["Why is this not working", "my phone is stupid", "my phone is dumb", "my iphone is not working", "my iphone won't function", "i'm stupid", "i'm dumb", "can't seem to make this work", "this is confusing me", "this is frustrating", "i need more help", "why can't I make this do what I want"],
+         "responses": ["It's going to be alright, work with me here", "You've got this, tell me more", "It will only get better if explain more", "Sorry I couldn't help, ask me again", "Everything will be fine, let me help you", "Calm down! Don't worry we'll figure this out"],
          "context_set": ""
         },
-        {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
+        {"tag": "success",
+         "patterns": ["I got it to work", "thanks for helping", "it's working", "it's doing what I want to now", "I got it to do that", "I'm feeling better now", "I understand now" ],
+         "responses": ["Great, glad I could help", "Awesome, look at you, the tech wizard!", "That's good! It's been a pleasure working with you", "Marvelous! Let me know if you have any other questions"],
+         "context_set": ""
+        },
+        {"tag": "screenshot",
+         "patterns": ["how do I take a screenshot", "I want to screenshot", "how to capture my screen", "how to take a picture of my screen", "how to screencapture"],
+         "responses": ["If you are using an iPhone 8 or lower, press the home and power buttons simultaneously. With the iPhone 10 onward, press the volume up button together with the power button"],
+         "context_set": ""
+        },
+        {"tag": "wifi",
+         "patterns": ["turn on my wifi", "my wifi is not working", "i can't connect to wifi", "how do i connect to a new wifi network", "where can I turn off my wifi", "where are the wifi settings"],
+         "responses": ["By swiping up from the bottom of your screen, you should see a grid of icons. In the upper left corner, there should be a group of 4 circles. Tap the bottom left circle to enable wifi. To connect to a new network, find the settings app and select wifi from the list"],
+         "context_set": ""
+        },
+        {"tag": "bluetooth",
+         "patterns": ["how can i connect my bluetooth device", "I want to pair my speaker", "how do I connect my bluetooth speaker", "I want to listen to music with my wireless earbuds", "where are bluetooth settings"],
+         "responses": ["Swipe up from the bottom of your screen, you should see a grid of icons. In the upper left corner, there should be a group of 4 circles. Tap the bottom right circle to enable bluetooth. To connect to a bluetooth device, find the settings app and select bluetooth from the list"],
+         "context_set": ""
+        },
+        {"tag": "airplanemode",
+         "patterns": ["how do I enable airplane mode", "where is airplane mode", "i want to turn on airplane mode", "show me where airplane mode is", "I'm flying today", "How can I turn off my cellular connection"],
+         "responses": ["Swipe up from the bottom of your screen, you should see a grid of icons. In the upper left corner, there should be a group of 4 circles. Tap the top left circle to enable airplane mode. It disables all network connections: wifi, bluetooth, and cellular."],
+         "context_set": ""
+        },
+        {"tag": "sound",
+         "patterns": ["my sound is too quiet", "my sound is too loud", "turn the sound up", "turn the sound down", "the speakers aren't loud enough", "the speakers are too loud", "I can't hear anything"],
+         "responses": ["To control your volume, press the two buttons on the left side of your phone. Up is up, down is down"],
+         "context_set": ""
+        },
+        {"tag": "brightness",
+         "patterns": ["my screen is too bright", "my screen is too dim", "how do I turn the brightness up", "how do I turn the brightness down", "how can I change my screen brightness"],
+         "responses": ["To change your screen brightness, swipe up from the bottom of your screen. You should see a grid of icons. Tap the bar that has a sun shape on it. Drag your finger up or down to adjust the brightness"],
+         "context_set": ""
+        },
+        {"tag": "battery",
+         "patterns": ["my battery percentage is low", "my battery is dying", "why is my battery getting low", "how do I save battery", "my batter is going down fast" ],
+         "responses": ["Oh! Sounds like you've been using your phone frequently! Try turning the brightness down or enabling airplane mode if you can. If your battery is really low, plug your phone in to charge."],
+         "context_set": ""
+        },
+        {"tag": "arrangingapps",
+         "patterns": ["i don't like where my apps are", "how do i move my apps", "how do I organize my apps", "how can i put apps in a folder", "how to change my homescreen"],
+         "responses": ["Tap and hold down on the app you would like to move. A drop down menu should appear. Tap 'Edit homescreen' and the other apps on your homescreen will begin to jiggle. hehe. Keep holding and drag your finger to drop the app in a new place. Press the home or power button to complete. To put apps in a folder, drag them over each other to drop them in a folder together. "],
+         "context_set": ""
+        },
+        {"tag": "camera",
+         "patterns": ["I want to take a picture", "How to take a photo", "where's the camera", "How can I take a photo", "how to get to the camera", "how do i use my iphones camera" ],
+         "responses": ["Try to find the camera app. It should be a grey icon with a camera shape in the middle. Tap on that and you should be able to see whats in front of you. Tap the white circle at the bottom of the screen to take a photo"],
+         "context_set": ""
+        },
+        {"tag": "photos",
+         "patterns": ["where can i view my photos", "where did my photos go", "i can't find my pictures", "i want to edit the photo i took", "how do i send a picture to someone", "i want to send a photo to someone" ],
+         "responses": ["Try to find the photos app. It should look like a rainbow colored flower icon. Tap on it and you will see your entire camera roll. Select individual photos to view them larger or tap 'years, month, or days' to go back further in your photos."],
+         "context_set": ""
+        },
+        {"tag": "messages",
+         "patterns": ["I want to text someone", "how do I text someone", "How can i send a message", "I would like to text somone", "how to I view a message I recieved" ],
+         "responses": ["Try to find the messages app. It should be a green icon with a white speech bubble in the middle. Tap on that and your screen should populate with a list of message threads. To compose a new message, either tap on an existing thread or select the little blue circle with a pen in it at the top. Begin typing your message, then tap the little blue circle with an arrow in it to send." ],
+         "context_set": ""
+        },
+        {"tag": "phone",
+         "patterns": ["I want to call someone", "how do I make a call", "i need to call a friend", "how can i listen to my voicemail", "how does voicemail work", "how do I create a new contact", "I need to add someones number" ],
+         "responses": ["Locate the green app icon with a phone shape in the middle. Tap the phone and you will see five tabs at the bottom: favorites, recents, contacts, keypad, and voicemail. Select keypad to a dial a number, tap contacts to add someone's number to your phone, recents shows calls you've made or missed, and finally voicemail allows you to play or delete your voicemail recordings."],
+         "context_set": ""
+        },
+        {"tag": "appstore",
+         "patterns": ["I want to install a new app", "how do I download apps", "how can I find more games for my phone", "how do I use the app store", "I need a new app for my phone"],
+         "responses": ["To use the appstore, find the blue app icon with a white 'A' in the middle. Tap on that and you will see the 'Today' view. This shows you what kind of apps are trending on the app store. You can also browse the games and apps tabs to find something of your liking. Tap the search tab to locate a particular app."],
          "context_set": ""
         }
    ]

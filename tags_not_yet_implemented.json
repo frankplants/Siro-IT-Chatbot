@@ -1,0 +1,15 @@
+{"tag": "calendar",
+ "patterns": ["I want to take a picture", "How to take a photo", "where's the camera", "How can I take a photo", "how to get to the camera", "how do i use my iphones camera" ],
+ "responses": ["Try to find the camera app. It should be a grey icon with a camera shape in the middle. Tap on that and you should be able to see whats in front of you. Tap the white circle at the bottom of the screen to take a photo"],
+ "context_set": ""
+},
+{"tag": "clock",
+ "patterns": ["I want to take a picture", "How to take a photo", "where's the camera", "How can I take a photo", "how to get to the camera", "how do i use my iphones camera" ],
+ "responses": ["Try to find the camera app. It should be a grey icon with a camera shape in the middle. Tap on that and you should be able to see whats in front of you. Tap the white circle at the bottom of the screen to take a photo"],
+ "context_set": ""
+},
+{"tag": "maps",
+ "patterns": ["I want to take a picture", "How to take a photo", "where's the camera", "How can I take a photo", "how to get to the camera", "how do i use my iphones camera" ],
+ "responses": ["Try to find the camera app. It should be a grey icon with a camera shape in the middle. Tap on that and you should be able to see whats in front of you. Tap the white circle at the bottom of the screen to take a photo"],
+ "context_set": ""
+},

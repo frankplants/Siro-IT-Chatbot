@@ -97,20 +97,25 @@ def bag_of_words(s, words):
     return numpy.array(bag)
 
 def chat():
-    print("Start talking with the bot! (type quit to stop)")
+    print("Start talking to Siro! (type quit to stop)")
     while True:
         inp = input("You: ")
         if inp.lower() == "quit":
             break
 
-        results = model.predict([bag_of_words(inp,words)])
+        results = model.predict([bag_of_words(inp,words)])[0]
         results_index = numpy.argmax(results)
         tag = labels[results_index]
 
-        for tg in data["intents"]:
-            if tg['tag'] == tag:
-                responses = tg['responses']
+        if results[results_index] > 0.7:
+            for tg in data["intents"]:
+                if tg['tag'] == tag:
+                    responses = tg['responses']
+            print("Siro:", random.choice(responses))
 
-        print("Bot:", random.choice(responses))
+        else:
+            print("I'm puzzled by your question. Try again later. If I still don't have what you're lookging for, please consult an online resource such as 'iPhone for Dummies' or 'The iPhone FAQ' (It's ok, I don't think you're dumb). You could also try downloading the Apple Tips app.")
+
+
 
 chat()
