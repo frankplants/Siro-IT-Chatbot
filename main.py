@@ -4,7 +4,7 @@ stemmer = LancasterStemmer()
 
 import numpy
 import tflearn
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
 import random
 import json
 import pickle
@@ -69,8 +69,8 @@ except:
 tf.reset_default_graph()
 
 net = tflearn.input_data(shape=[None, len(training[0])]) #length of sentence input in tensorflow
-net = tflearn.fully_connected(net, 8) #hidden layer 1
-net = tflearn.fully_connected(net, 8) #hidden layer 2
+net = tflearn.fully_connected(net, 20) #hidden layer 1
+net = tflearn.fully_connected(net, 20) #hidden layer 2
 net = tflearn.fully_connected(net, len(output[0]), activation="softmax") #softmax assigns probability to neurons
 net = tflearn.regression(net)
 
@@ -79,7 +79,7 @@ model = tflearn.DNN(net)
 try:
     model.load("model.tflearn")
 except:
-    model.fit(training, output, n_epoch=1000, batch_size=8, show_metric=True)
+    model.fit(training, output, n_epoch=1000, batch_size=20, show_metric=True)
     model.save("model.tflearn")
 #Train the model
 
@@ -107,7 +107,7 @@ def chat():
         results_index = numpy.argmax(results)
         tag = labels[results_index]
 
-        if results[results_index] > 0.7:
+        if results[results_index] > 0.5:
             for tg in data["intents"]:
                 if tg['tag'] == tag:
                     responses = tg['responses']

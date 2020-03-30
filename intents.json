@@ -5,7 +5,7 @@
          "context_set": ""
         },
         {"tag": "greeting2",
-         "patterns": ["how are you doing?", "are you ok", "feeling good today?", "how do you feel", "are you well", "are you content"],
+         "patterns": ["how are you doing?", "are you ok", "feeling good today?", "how do you feel", "are you well", "are you content", "whats up"],
          "responses": ["Feeling great!", "I'm good, thank you", "Doing alright, I suppose", "Never felt better"],
          "context_set": ""
         },
